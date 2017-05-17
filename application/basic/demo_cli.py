@@ -162,7 +162,20 @@ class Demo(object):
         for multi_batch in test_data.get_batches(config.batch_size, num_batches=1, cluster=config.cluster):
             ei = self.evaluator.get_evaluation(self.sess, multi_batch)
             e = ei if e is None else e + ei
-        return (e.id2answer_dict[0])
+
+        print(e.id2answer_dict['spans'][0][0][1])
+        print(e.id2answer_dict['spans'][0][0][1])
+        print(e.id2answer_dict['spans'][0][0][1])
+        
+        print(e.id2answer_dict['spans'][0][1][1])
+        print(e.id2answer_dict['spans'][0][1][1])
+        print(e.id2answer_dict['spans'][0][1][1])
+
+        return {
+            'phrase': e.id2answer_dict[0],
+            'start_word_index': e.id2answer_dict['spans'][0][0][1],
+            'end_word_index': e.id2answer_dict['spans'][0][1][1]
+        }
 
 if __name__ == "__main__":
     tf.app.run()

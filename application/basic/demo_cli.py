@@ -163,14 +163,6 @@ class Demo(object):
             ei = self.evaluator.get_evaluation(self.sess, multi_batch)
             e = ei if e is None else e + ei
 
-        print(e.id2answer_dict['spans'][0][0][1])
-        print(e.id2answer_dict['spans'][0][0][1])
-        print(e.id2answer_dict['spans'][0][0][1])
-        
-        print(e.id2answer_dict['spans'][0][1][1])
-        print(e.id2answer_dict['spans'][0][1][1])
-        print(e.id2answer_dict['spans'][0][1][1])
-
         return {
             'phrase': e.id2answer_dict[0],
             'start_word_index': e.id2answer_dict['spans'][0][0][1],

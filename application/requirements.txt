@@ -1,0 +1,7 @@
+pprint
+tensorflow>=0.11
+ipython
+flask
+nltk
+tqdm
+jinja2

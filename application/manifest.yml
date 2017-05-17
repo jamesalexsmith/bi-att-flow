@@ -1,0 +1,9 @@
+---
+applications:
+- name: bidaf
+  instances: 1
+  memory: 2048MB
+  disk_quota: 4096MB
+  command: null
+  timeout: 180
+  buildpack: https://github.com/cloudfoundry/python-buildpack.git
